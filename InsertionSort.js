@@ -25,8 +25,8 @@
     let arr = [];
     for (let i = 0; i < 10000; i++) {
         //arr.push(i);
-        arr.push(10000 - i - 1);
-        //    arr.push(Number.parseInt(Math.random() * 10000));
+        //arr.push(10000 - i - 1);
+            arr.push(Number.parseInt(Math.random() * 10000));
     }
 
     let start = new Date().getTime();

@@ -1,8 +1,8 @@
 (() => {
-    function sort(arr) {
-        for (let i = 0; i < arr.length - 1; i++) {
+    function sort(arr, len) {
+        for (let i = 0; i < len - 1; i++) {
             let didSwap = false; //改进如果有序直接0(n)
-            for (let j = 0; j < arr.length - 1 - i; j++) {
+            for (let j = 0; j < len - 1 - i; j++) {
                 if (arr[j] > arr[j + 1]) {
                     didSwap = true;
                     let swap = arr[j];
@@ -19,17 +19,19 @@
 
     // 构造数据
     let arr = [];
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 10; i++) {
         //arr.push(i);
-        arr.push(10000 - i - 1);
-        //    arr.push(Number.parseInt(Math.random() * 10000));
+        //arr.push(10000 - i - 1);
+        arr.push(Number.parseInt(Math.random() * 10000));
     }
 
     let start = new Date().getTime();
-    sort(arr);
+    sort(arr, arr.length);
     let end = new Date().getTime();
     console.log("%c 花费时间" + (end - start) + "ms", 'color:#000652;');
     console.log("%c 时间复杂度为：平均O(n^2)、最好O(n)、最坏O(n^2)、空间O(1)、内排序、稳定", 'color:#000652;'); // 完成运行次数：sn = 1/2*n^2 - 1/2*n" (n属于正整数);
+
+    console.log(arr);
 })();
 
 
