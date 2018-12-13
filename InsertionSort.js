@@ -10,23 +10,20 @@
     function sort(arr, len) {
         let tmp;
         for (let i = 1; i < len; i++) {
-            for (let j = i; j > 0; j--) {
-                if (arr[j] < arr[j - 1]) {
-                    tmp = arr[j];
-                    arr[j] = arr[j - 1];
-                    arr[j - 1] = tmp;
-                } else
-                    break;
+            for (let j = i - 1; j >= 0 && arr[j] > arr[j + 1]; j -= 1) {
+                tmp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = tmp;
             }
         }
     }
 
     // 构造数据
     let arr = [];
-    for (let i = 0; i < 10000; i++) {
+    for (let i = 0; i < 50000; i++) {
         //arr.push(i);
         //arr.push(10000 - i - 1);
-            arr.push(Number.parseInt(Math.random() * 10000));
+        arr.push(Number.parseInt(Math.random() * 10000));
     }
 
     let start = new Date().getTime();
