@@ -1,3 +1,3 @@
-module quick_sort
+module x
 
 go 1.14

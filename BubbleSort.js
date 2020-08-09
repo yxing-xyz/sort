@@ -1,3 +1,6 @@
+/*
+    这个只优化了有序系列,还可以优化比较已排序序列见golagn实现.
+*/
 (() => {
     function sort(arr, len) {
         for (let i = 0; i < len - 1; i++) {

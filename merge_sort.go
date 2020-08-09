@@ -1,22 +1,5 @@
 package main
 
-import (
-	"fmt"
-	"math/rand"
-	"time"
-)
-
-func main() {
-	nums := make([]int, 10000)
-	for i := 0; i < len(nums); i++ {
-		rand.Seed(time.Now().UnixNano())
-		nums[i] = rand.Intn(len(nums))
-	}
-	fmt.Println(nums)
-	MergeSort(nums, 0, len(nums)-1)
-	fmt.Println(nums)
-}
-
 func MergeSort(nums []int, left, right int) {
 	if left < right {
 		middleIndex := (left + right) >> 1
