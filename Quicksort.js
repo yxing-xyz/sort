@@ -75,16 +75,14 @@
   }
 
   let arr = [];
-  let len = 10**6;
+  let len = 10**7;
   for (let i = 0; i < len; i += 1) {
     arr.push(Number.parseInt(Math.random() * len));
   }
+
   let start = new Date().getTime();
   sort(arr, 0, arr.length - 1);
   let end = new Date().getTime();
+
   console.log("%c 花费时间" + (end - start) + "ms", "color:#000652;");
-  console.log(
-    "%c 时间复杂度为：平均O(n log n)、最好O(n log n)、最坏O(n^2)、空间O(log n)、内排序、稳定",
-    "color:#000652;"
-  );
 })();
