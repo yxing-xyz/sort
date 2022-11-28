@@ -1,9 +1,5 @@
 package main
 
-import "sync"
-
-var wg sync.WaitGroup
-
 func QuickSort(nums []int, left, right int) {
 	if left < right {
 		privotIndex := partition(nums, left, right)
